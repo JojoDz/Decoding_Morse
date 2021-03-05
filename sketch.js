@@ -4,24 +4,25 @@ function decode_morse(morse_code){
     morse_code_tab = morse_code.split(" ");
     //endroit où on va stocker les éléments convertis
     let solution = "";
+    //boucle forEach pour parcourir chaque élément du tableau
     morse_code_tab.forEach(element => {
         let print = compare_alphabet_morse(element);
-        //chaque mot en morse est converti en chaine de caractère mais sur des lignes différentes
+        //chaque mot en morse est converti en chaîne de caractère mais sur des lignes différentes
         console.log(element);
-        solution += print;
         //caractère converti sur une ligne
+        solution += print;
     });
     console.log(solution);
 }
 
-decode_morse("-... --- -. .--- ..-   .- -.. .-");
+decode_morse("-... --- -. .--- --- ..- .-.");
 
 function compare_alphabet_morse(morse_letter){
     var morseAlphabet = {
-        //problématique de deux espaces qu'il ne reconnaît pas
-        //tableau lettre
-        //tableau mots
-        " ": " ",
+        // //problématique de deux espaces qu'il ne reconnaît pas
+        // //tableau lettre
+        // //tableau mots
+        // " ": " ",
         ".-": "a",
         "-...":"b",
         "-.-.": "c",
